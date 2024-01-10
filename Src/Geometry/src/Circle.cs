@@ -1,5 +1,6 @@
 using System;
 using System.Numerics;
+using Geometry.Exceptions;
 
 namespace Geometry
 {
@@ -10,6 +11,11 @@ namespace Geometry
 
         public Circle(Vector2 centerCoordinates, float radius)
         {
+            if (radius < 0f)
+            {
+                throw new CircleConstructorException("Radius must be greater than zero");
+            }
+            
             _centerCoordinates = centerCoordinates;
             _radius = radius;
         }
