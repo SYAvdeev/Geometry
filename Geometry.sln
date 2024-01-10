@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry", "Src\Geometry\Geometry.csproj", "{367403E2-074D-49D3-81A3-7D558BEE61B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{BD8411D0-17A6-420B-8C93-FBF72967CD9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{367403E2-074D-49D3-81A3-7D558BEE61B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{367403E2-074D-49D3-81A3-7D558BEE61B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{367403E2-074D-49D3-81A3-7D558BEE61B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{367403E2-074D-49D3-81A3-7D558BEE61B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{367403E2-074D-49D3-81A3-7D558BEE61B6} = {BD8411D0-17A6-420B-8C93-FBF72967CD9D}
+	EndGlobalSection
+EndGlobal
