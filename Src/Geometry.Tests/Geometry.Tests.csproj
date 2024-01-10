@@ -4,11 +4,12 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{367403E2-074D-49D3-81A3-7D558BEE61B6}</ProjectGuid>
+        <ProjectGuid>{28EB5D31-3CC2-41B6-BF1B-9F148BB75FDC}</ProjectGuid>
+        <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>Geometry</RootNamespace>
-        <AssemblyName>Geometry</AssemblyName>
+        <RootNamespace>Geometry.Tests</RootNamespace>
+        <AssemblyName>Geometry.Tests</AssemblyName>
         <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
     </PropertyGroup>
@@ -37,13 +38,29 @@
         <Reference Include="System.Data" />
         <Reference Include="System.Numerics" />
         <Reference Include="System.Xml" />
+        <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c">
+            <HintPath>..\..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
+        </Reference>
+        <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c">
+            <HintPath>..\..\packages\xunit.assert.2.1.0\lib\dotnet\xunit.assert.dll</HintPath>
+        </Reference>
+        <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c">
+            <HintPath>..\..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
+        </Reference>
+        <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c">
+            <HintPath>..\..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="src\Circle.cs" />
-        <Compile Include="src\Constants.cs" />
-        <Compile Include="src\IAreaProvider.cs" />
-        <Compile Include="src\Triangle.cs" />
+        <Compile Include="tests\TestsCircle.cs" />
+        <Compile Include="tests\TestsTriangle.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Geometry\Geometry.csproj">
+        <Project>{367403e2-074d-49d3-81a3-7d558bee61b6}</Project>
+        <Name>Geometry</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -53,5 +70,4 @@
     <Target Name="AfterBuild">
     </Target>
     -->
-
 </Project>
